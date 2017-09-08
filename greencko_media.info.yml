@@ -1,0 +1,13 @@
+name: Media
+description: 'Provides media related settings and tools'
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - file
+  - image
+  - responsive_image
+  - user
+  - views
+version: 8.x-1.0
+package: 'Greencko Drupal Distribution'
