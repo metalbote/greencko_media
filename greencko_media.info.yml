@@ -1,13 +1,19 @@
-name: Media
-description: 'Provides media related settings and tools'
+name: 'Greencko Media'
+description: 'Provide Media related configuration.'
 type: module
 core: 8.x
+version: 8.x-6.x-dev
+package: Greencko
 dependencies:
+  - blazy
   - crop
+  - media
+  - slick
+  - type_style
+  - video_embed_media
+  - dropzonejs_eb_widget
+  - entity_browser_generic_embed
   - file
   - image
-  - responsive_image
-  - user
+  - video_embed_field
   - views
-version: 8.x-1.0
-package: 'Greencko Drupal Distribution'

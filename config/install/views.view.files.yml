@@ -1,13 +1,13 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - user
 id: files
-label: Dateien
+label: Files
 module: file
-description: 'Dateien suchen und verwalten.'
+description: 'Find and manage files.'
 tag: default
 base_table: file_managed
 base_field: fid
@@ -247,7 +247,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: MIME-Typ
+          label: 'MIME type'
           exclude: false
           alter:
             alter_text: false
@@ -299,7 +299,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Größe
+          label: Size
           exclude: false
           alter:
             alter_text: false
@@ -395,8 +395,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Temporär
-            format_custom_true: Dauerhaft
+            format_custom_false: Temporary
+            format_custom_true: Permanent
           plugin_id: field
           entity_type: file
           entity_field: status
@@ -407,7 +407,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Upload Datum'
+          label: 'Upload date'
           exclude: false
           alter:
             alter_text: false
@@ -463,7 +463,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Datum geändert'
+          label: 'Changed date'
           exclude: false
           alter:
             alter_text: false
@@ -519,7 +519,7 @@ display:
           relationship: fid
           group_type: sum
           admin_label: ''
-          label: 'Verwendet in'
+          label: 'Used in'
           exclude: false
           alter:
             alter_text: false
@@ -565,7 +565,7 @@ display:
           decimal: .
           separator: ','
           format_plural: true
-          format_plural_string: "1 Stelle\x03@count Stellen"
+          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
           prefix: ''
           suffix: ''
           plugin_id: numeric
@@ -583,7 +583,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Dateiname
+            label: Filename
             description: ''
             use_operator: false
             operator: filename_op
@@ -623,7 +623,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: MIME-Typ
+            label: 'MIME type'
             description: ''
             use_operator: false
             operator: filemime_op
@@ -692,7 +692,7 @@ display:
           entity_type: file
           entity_field: status
       sorts: {  }
-      title: Dateien
+      title: Files
       header: {  }
       footer: {  }
       empty:
@@ -701,7 +701,7 @@ display:
           table: views
           field: area_text_custom
           empty: true
-          content: 'Keine Dateien verfügbar'
+          content: 'No files available.'
           plugin_id: text_custom
       relationships:
         fid:
@@ -723,18 +723,18 @@ display:
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
+      max-age: -1
       tags: {  }
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Dateiübersicht
+    display_title: 'Files overview'
     position: 1
     display_options:
       path: admin/content/files
       menu:
         type: tab
-        title: Dateien
+        title: Files
         description: ''
         menu_name: admin
         weight: 0
@@ -760,7 +760,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
+      max-age: -1
       tags: {  }
   page_2:
     display_plugin: page
@@ -813,7 +813,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Entität
+          label: Entity
           exclude: false
           alter:
             alter_text: false
@@ -863,7 +863,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Entitätstyp
+          label: 'Entity type'
           exclude: false
           alter:
             alter_text: false
@@ -912,7 +912,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Registrierendes Modul'
+          label: 'Registering module'
           exclude: false
           alter:
             alter_text: false
@@ -961,7 +961,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Anzahl der Verwendung'
+          label: 'Use count'
           exclude: false
           alter:
             alter_text: false
@@ -1007,7 +1007,7 @@ display:
           decimal: .
           separator: ','
           format_plural: false
-          format_plural_string: "1\x03@count"
+          format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
           plugin_id: numeric
@@ -1027,7 +1027,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'Dateiverwendungsinformationen für {{ arguments.fid }}'
+          title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -1117,5 +1117,5 @@ display:
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
+      max-age: -1
       tags: {  }
